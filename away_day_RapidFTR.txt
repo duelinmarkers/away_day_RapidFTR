@@ -1,4 +1,4 @@
-Chef on RapidFTR
+Chef (and friends) on RapidFTR
 
 
 What is RapidFTR?
@@ -21,8 +21,13 @@ FTR = Family Tracing and Reunification
 
 
 
+
+
+
+
+
   "Faster paper" to streamline
-  family tracing and reunification
+   family tracing and reunification
 
 
 
@@ -33,26 +38,27 @@ FTR = Family Tracing and Reunification
 
 * Non-functional Goals
 
-  Make it easy for any organization
-  to set up their own production instance.
-
-  Host and manage
-  multiple production instances
-  with minimal technical staff.
-
-  And maybe:
-  Make it easy for any organization
-  to set up their own
-  hosting and management of
-  multiple production instances 
-  with minimal technical staff.
-
-
-
+ ❶ Make it easy for any organization
+   to set up their own production instance,
+   on their infrastructure.
+ 
+ ❷ Host and manage
+   multiple production instances
+   with minimal technical staff.
+ 
+   And maybe:
+ ❸ Make it easy for any organization
+   to set up their own
+   hosting and management of
+   multiple production instances 
+   with minimal technical staff.
 
 
 
-* Architecture
+
+
+
+* Architecture (in two sentences)
 
   DATA COLLECTION APPLICATIONS on mobile devices
   synchronize data with the SERVER APPLICATION.
@@ -67,35 +73,77 @@ FTR = Family Tracing and Reunification
 
 
 
+  Today we're just talking about
+  the server application.
+
+
+
+
+
+
+
        Logical Architecture 
      of the Server Application
     
-    +---------+     +---------+
-    | CouchDB |     |   Solr  |
-    +----+----+     +----+----+
-         |               |
-    +----+---------------+----+
-    |    Rails Application    |
-    +-----------+-------------+
-                |
-             Clients
+    ┌─────────┐     ┌─────────┐
+    │ CouchDB │     │   Solr  │
+    └─────────┘     └─────────┘
+         ↑               ↑
+    ┌────┴───────────────┴────┐
+    │    Rails Application    │
+    └─────────────────────────┘
+                 ↑
+              Clients
 
-What makes it different?
-* Instance-per-emergency model
-* Goal of making it easy for anyone to deploy their own
-* 
-Most similar to Mingle.
 
-Chef for Uganda
-* chef-server (via the Opscode platform)
 
-Why chef-server is an odd fit for RapidFTR
 
-Chef-solo for RapidFTR more generally
+
+
+Very Simple, but still --
+  Erlang, Java, OpenSSL, Couch, Solr, 
+  Passenger, Nginx, Ruby, Rubygems,
+  Rake, Bundler, Git, ImageMagick,
+  libxml2, libpcre, etc.
+-- setup is hairy.
+
+
+
+
+
+
+
+
+
+    Then Uganda came along
+    when we weren't really ready.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Chef for Uganda using the Opscode platform
+* How chef works
+  * Client-server architecture
+  * The chef repo
+  * Anatomy of a cookbook
+* Why chef-server is an odd fit for RapidFTR
+
+Chef-solo
 
 The local build: vagrant
 * What's vagrant?
 * How the build works
+
 
 The CI build: EC2
 * Why is EC2 better than vagrant for this?
