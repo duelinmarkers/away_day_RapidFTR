@@ -116,7 +116,7 @@ Very Simple, but still --
 
 
     Then Uganda came along
-    when we weren't really ready.
+    when we weren't ready.
 
 
 
@@ -134,14 +134,27 @@ Very Simple, but still --
 Chef for Uganda using the Opscode platform
 * How chef works
   * Client-server architecture
+    * Too boring for a diagram
   * The chef repo
+    client-config
+    recipes
+    roles
+  * Knife  
   * Anatomy of a cookbook
+    <cookbook name>/
+      recipes/     (eg couchdb/recipies/default.rb)
+      attributes/  (eg passenger/attributes/daemon.rb)
+      files/       (eg couchdb/files/default/local.ini)
+      templates/   (eg passenger/templates/default/nginx.conf.erb)
 * Why chef-server is an odd fit for RapidFTR
 
 Chef-solo
 
+
+
 The local build: vagrant
 * What's vagrant?
+  "a tool for building and distributing virtualized development environments"
 * How the build works
   * "System Spec"
 
