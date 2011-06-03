@@ -12,7 +12,7 @@ Physical Architecture (for Uganda)
              Clients
 
 
- Physical Architecture (for Uganda)
+     Actual Physical Architecture (for Uganda)
   ┌─────────────────────────────┐  ┌─────────────┐
   │         App Server          │  │Backup Server│
   │ ┌─────────┐     ┌─────────┐ ├──┤ ┌─────────┐ │

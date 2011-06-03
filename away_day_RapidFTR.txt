@@ -143,13 +143,26 @@ Chef-solo
 The local build: vagrant
 * What's vagrant?
 * How the build works
-
+  * "System Spec"
 
 The CI build: EC2
 * Why is EC2 better than vagrant for this?
-** It works on Linode
-** It more closely approximates real deployment
-*** (missing pieces: persistent storage, DR)
+  * It works on Linode
+  * It more closely approximates real deployment
+    * missing pieces: persistent storage, DR
 * How the build works
-** Parameterized instance type
-** Parameterized AMI
+  * Parameterized instance type
+  * Parameterized AMI
+
+
+Vagrant    : http://vagrantup.com/ 
+             http://www.vagrantbox.es/
+VirtualBox : http://www.virtualbox.org/
+
+Chef       : http://www.opscode.com/chef/
+
+amazon-ec2 : https://github.com/grempe/amazon-ec2
+
+RapidFTR   : http://www.rapidftr.com/
+             http://ci.rapidftr.com:8111/
+
