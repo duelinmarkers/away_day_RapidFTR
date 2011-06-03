@@ -1,0 +1,107 @@
+Chef on RapidFTR
+
+
+What is RapidFTR?
+
+FTR = Family Tracing and Reunification
+
+
+
+
+
+
+* Purpose
+
+  "RapidFTR helps aid workers 
+   collect, sort and share 
+   photographs and information 
+   about children in emergency situations 
+   so they can be registered for care services 
+   and reunited with their families."
+
+
+
+  "Faster paper" to streamline
+  family tracing and reunification
+
+
+
+
+
+
+
+
+* Non-functional Goals
+
+  Make it easy for any organization
+  to set up their own production instance.
+
+  Host and manage
+  multiple production instances
+  with minimal technical staff.
+
+  And maybe:
+  Make it easy for any organization
+  to set up their own
+  hosting and management of
+  multiple production instances 
+  with minimal technical staff.
+
+
+
+
+
+
+* Architecture
+
+  DATA COLLECTION APPLICATIONS on mobile devices
+  synchronize data with the SERVER APPLICATION.
+
+  HTML interface in the SERVER APPLICATION
+  provides export, reporting, and administration.
+
+
+
+
+
+
+
+
+       Logical Architecture 
+     of the Server Application
+    
+    +---------+     +---------+
+    | CouchDB |     |   Solr  |
+    +----+----+     +----+----+
+         |               |
+    +----+---------------+----+
+    |    Rails Application    |
+    +-----------+-------------+
+                |
+             Clients
+
+What makes it different?
+* Instance-per-emergency model
+* Goal of making it easy for anyone to deploy their own
+* 
+Most similar to Mingle.
+
+Chef for Uganda
+* chef-server (via the Opscode platform)
+
+Why chef-server is an odd fit for RapidFTR
+
+Chef-solo for RapidFTR more generally
+
+The local build: vagrant
+* What's vagrant?
+* How the build works
+
+The CI build: EC2
+* Why is EC2 better than vagrant for this?
+** It works on Linode
+** It more closely approximates real deployment
+*** (missing pieces: persistent storage, DR)
+* How the build works
+** Parameterized instance type
+** Parameterized AMI
