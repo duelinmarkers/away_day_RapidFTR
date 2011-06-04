@@ -115,8 +115,7 @@ Very Simple, but still --
 
 
 
-    Then Uganda came along
-    when we weren't ready.
+             Then, Uganda
 
 
 
@@ -132,50 +131,198 @@ Very Simple, but still --
 
 
 Chef for Uganda using the Opscode platform
+
+
+
+
+
+
+
+
+
+
+
+
 * How chef works
+
+
+
+
+
+
+
+
+
+
   * Client-server architecture
-    * Too boring for a diagram
-  * The chef repo
-    client-config
-    recipes
-    roles
-  * Knife  
-  * Anatomy of a cookbook
-    <cookbook name>/
-      recipes/     (eg couchdb/recipies/default.rb)
-      attributes/  (eg passenger/attributes/daemon.rb)
-      files/       (eg couchdb/files/default/local.ini)
-      templates/   (eg passenger/templates/default/nginx.conf.erb)
-* Why chef-server is an odd fit for RapidFTR
-
-Chef-solo
+    
+    Too boring for a diagram
 
 
 
-The local build: vagrant
-* What's vagrant?
-  "a tool for building and distributing virtualized development environments"
-* How the build works
-  * "System Spec"
 
-The CI build: EC2
-* Why is EC2 better than vagrant for this?
+
+
+
+
+
+    Run your own chef-server
+    OR
+    Use the "Opscode Platform"
+
+
+
+
+
+
+
+
+
+       Shared cookbooks
+
+ http://community.opscode.com/cookbooks
+
+
+
+
+
+
+
+
+
+             Knife  
+
+
+
+
+
+
+
+
+
+
+      The chef repo
+
+    chef-repo/
+     └ client-config/
+     └ cookbooks/
+     └ roles/
+       ...
+
+
+
+
+
+
+
+
+
+        Anatomy of a cookbook
+
+ <cookbook name>/
+  └ recipes/     (eg couchdb/recipies/default.rb)
+  └ attributes/  (eg passenger/attributes/daemon.rb)
+  └ files/       (eg couchdb/files/default/local.ini)
+  └ templates/   (eg passenger/templates/default/nginx.conf.erb)
+
+
+
+
+
+
+
+
+
+
+                 Chef-solo
+
+
+
+
+
+
+
+
+
+
+
+        The local build: vagrant
+  
+  "a tool for building and distributing
+   virtualized development environments"
+
+
+
+
+
+
+
+
+
+
+
+
+
+             How the build works
+               "System Spec"
+
+
+
+
+
+
+
+
+
+
+
+
+         The CI build: EC2
+
+  Why is EC2 better than vagrant for this?
   * It works on Linode
   * It more closely approximates real deployment
     * missing pieces: persistent storage, DR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 * How the build works
   * Parameterized instance type
   * Parameterized AMI
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+RapidFTR   : http://www.rapidftr.com/
 Vagrant    : http://vagrantup.com/ 
              http://www.vagrantbox.es/
 VirtualBox : http://www.virtualbox.org/
-
 Chef       : http://www.opscode.com/chef/
-
 amazon-ec2 : https://github.com/grempe/amazon-ec2
 
-RapidFTR   : http://www.rapidftr.com/
-             http://ci.rapidftr.com:8111/
+
 
