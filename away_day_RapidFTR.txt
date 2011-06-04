@@ -1,16 +1,22 @@
-Chef (and friends) on RapidFTR
-
-
-What is RapidFTR?
-
-FTR = Family Tracing and Reunification
 
 
 
+   Chef (and friends) on RapidFTR
+   John Hume
+   jhume@thoughtworks.com
 
 
 
-* Purpose
+
+
+
+
+
+
+
+
+  RapidFTR
+  FTR = Family Tracing and Reunification
 
   "RapidFTR helps aid workers 
    collect, sort and share 
@@ -26,8 +32,13 @@ FTR = Family Tracing and Reunification
 
 
 
+
+
+
   "Faster paper" to streamline
    family tracing and reunification
+
+
 
 
 
@@ -204,8 +215,8 @@ Chef for Uganda using the Opscode platform
       The chef repo
 
     chef-repo/
-     └ client-config/
-     └ cookbooks/
+     ├ client-config/
+     ├ cookbooks/
      └ roles/
        ...
 
@@ -220,9 +231,9 @@ Chef for Uganda using the Opscode platform
         Anatomy of a cookbook
 
  <cookbook name>/
-  └ recipes/     (eg couchdb/recipies/default.rb)
-  └ attributes/  (eg passenger/attributes/daemon.rb)
-  └ files/       (eg couchdb/files/default/local.ini)
+  ├ recipes/     (eg couchdb/recipies/default.rb)
+  ├ attributes/  (eg passenger/attributes/daemon.rb)
+  ├ files/       (eg couchdb/files/default/local.ini)
   └ templates/   (eg passenger/templates/default/nginx.conf.erb)
 
 
@@ -238,6 +249,16 @@ Chef for Uganda using the Opscode platform
 
 
 
+
+
+
+
+
+
+
+
+
+             Further Automation
 
 
 
